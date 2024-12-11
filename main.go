@@ -129,7 +129,7 @@ func InsertObservationData(db *sql.DB, observations []models.Observation, provin
 			tendencyCharacteristic, presentWeather, horizontalVisibility, totalCloudCover, humidex,
 			utcTime, localTime)
 
-		log.Println("Log for "+stationName, latitude, longitude, "at time "+utcTime.Format(time.RFC3339)+" inserted into database")
+		log.Println("Weather data for "+stationName, latitude, longitude, "at time "+utcTime.Format(time.RFC3339)+" inserted into database")
 		if err != nil {
 			return fmt.Errorf("failed to insert observation: %w", err)
 		}
